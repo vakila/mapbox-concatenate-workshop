@@ -6,7 +6,7 @@ Use `mapbox-gl-js` to display your map in an HTML page.
 
 ### Instructions
 
-- Use your text editor to open the [`map.html`](../map.html) file in the root directory of this repository.
+- Use your text editor to open the [`map.html`](./map.html) file in the root directory of this repository.
 - Read through the code & comments to see what it does.
 - Add your Mapbox access token
   - Copy your access token:
