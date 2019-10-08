@@ -10,7 +10,7 @@ In this step we'll add some custom click handling to `map.html` to make the map 
 
 #### Add a click handler that logs to the console
 - In `map.html`, add the following code to the bottom of your JS script (directly after the "Part 4 code will go here" comment):
-  ```
+  ```javascript
   map.on('click', (event) => {
     const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
     console.log(JSON.stringify(clickedPoint));
@@ -23,7 +23,7 @@ In this step we'll add some custom click handling to `map.html` to make the map 
 #### Log more information about the map's position
 The user might change the map's zoom, pitch (tilt) and bearing (rotation), so let's log information about those settings as well.
 - Update your handler code to wrap the `clickedPoint` and other map settings in a `location` object, and then log that object:
-  ```
+  ```javascript
   map.on('click', (event) => {
     const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
 
@@ -42,7 +42,7 @@ The user might change the map's zoom, pitch (tilt) and bearing (rotation), so le
 #### Re-center the map when the user clicks
 The `.flyTo()` method lets us programmatically move the map to a certain location. Let's use it to re-center the map to wherever the user clicks.
 - Add the line `map.flyTo(location);` to your handler code, just before the `console.log`. Your handler should now look like this:
-  ```
+  ```javascript
   map.on('click', (event) => {
     const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
 
@@ -64,7 +64,7 @@ The `.flyTo()` method lets us programmatically move the map to a certain locatio
 We can use the `.queryRenderedFeatures()` method to see if the point the user clicked corresponds to any feature(s) from a specific layer. Let's use it to conditionally log the `title` and `description` of your points if they are clicked.
 
 - Replace the `console.log` line at the end of your handler with the following lines, using the name of your custom layer. (Not sure of the layer name? Look for it in the left sidebar of the Studio style editor.)
-  ```
+  ```javascript
   const clicked = {
     location: location
   };
@@ -81,7 +81,7 @@ We can use the `.queryRenderedFeatures()` method to see if the point the user cl
 
 
 - Your handler code should now look like this:
-  ```
+  ```javascript
   map.on('click', (event) => {
     const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
 
@@ -114,7 +114,7 @@ We can use the `.queryRenderedFeatures()` method to see if the point the user cl
 Logging to the console is great, but it's only for us devs - most users would prefer the important info displayed on the map. Let's use a `mapboxgl.Popup` to display a point's title & description.
 
 - Modify the `if` block in your handler code as follows, to add a `Popup` with the title & description if a user clicks one of the features from your layer:
-  ```
+  ```javascript
   if (clickedFeatures.length > 0) {
     clicked.title = clickedFeatures[0].properties.title;
     clicked.description = clickedFeatures[0].properties.description;
@@ -127,3 +127,8 @@ Logging to the console is great, but it's only for us devs - most users would pr
   ```
 - The handler code in your `map.html` file should now look like the code in `map-completed.html`.
 - Reload `map.html` in your browser and click on some points from your dataset to see the popups appear!
+
+
+### Next step
+
+[Part 5](./part-5.md)

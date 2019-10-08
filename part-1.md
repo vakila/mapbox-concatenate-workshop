@@ -16,8 +16,8 @@ Some ideas:
   - Click the marker icon in the upper left corner (It will say "Draw a point")
   - Click the map location you want
   - In the left sidebar, click "Add property" to add at least two properties:
-    - `title`: A name for the place, e.g. `San Francisco`
-    - `description`: A few words or sentence about the place, e.g. `Where I sleep when I'm not traveling for conferences!`
+    - `title`: A name for the place, e.g. `Microsoft Lagos`
+    - `description`: A few words or sentences about the place, e.g. `The building with the pointy white spire & blinking red light at the top. You can't miss it!`
     You can add additional properties if you want!
 - Click "Save" to save your dataset
 - Click "Export" and then "Export to new tileset" to convert the dataset to a new tileset we can use in the next step
@@ -25,3 +25,7 @@ Some ideas:
 
 - Once you've saved & exported the Dataset, navigate back to the [Datasets page](https://studio.mapbox.com/datasets/) - you should see your dataset there!
 - [Optional] Download the dataset as a `.geojson` file, and open it in a text editor to see what the data looks like under the hood.
+
+### Next step
+
+[Part 2](./part-2.md)

@@ -48,18 +48,38 @@ No prior experience with geographic data or web mapping is required; basic famil
 
 ### [Part 5: Creativity](part-5.md)
 
-## What to do next
+## After this workshop
 
-We've only scratched the surface of what Mapbox can do!
+### [Optional] Publish your maps on Github Pages
+
+If you forked the workshop repo on Github, you can use [Github Pages](https://pages.github.com/) to publish your maps right now!
+
+- Commit any changes you made to **your fork** of the repository:
+  ```
+  $ git add .
+  $ git commit -m "add my awesome maps"
+  ```
+- Create a new branch called `gh-pages` and push it to **your fork** on Github
+  ```
+  $ git checkout -b gh-pages
+  $ git push -u origin gh-pages
+  ```
+- Wait a few minutes, and your maps will be published at `https://<your-username>.github.io/mapbox-concatenate-workshop/...`!
+
+### Share what you #builtwithmapbox
+We'd love to see whatever you build! Share on Twitter with the [`#builtwithmapbox`](https://twitter.com/hashtag/builtwithmapbox) hashtag so that we can amplify your work!
+
+### Learn more about maps
+We've only scratched the surface of what maps & Mapbox tools can do!
 
 For more information & ideas, check out:
 - The Mapbox [Documentation](https://docs.mapbox.com), including [Help](https://docs.mapbox.com/help/) and [Tutorials](https://docs.mapbox.com/help/tutorials)
 - [Documentation](https://docs.mapbox.com/mapbox-gl-js/api/) & [Examples](https://docs.mapbox.com/mapbox-gl-js/examples/) for [mapbox-gl-js](https://github.com/mapbox/mapbox-gl-js)
 - [The Mapbox Studio Manual](https://docs.mapbox.com/studio-manual/)
 
-Stay in touch! Keep up with [@Mapbox](https://twitter.com/mapbox) and [@AnjanaVakil](https://twitter.com/anjanavakil) on Twitter, and [contact Mapbox](https://www.mapbox.com/contact/) if you need any help with our tools.  
+### Stay in touch
 
-We'd love to see whatever you build! Please share on Twitter with the `#builtwithmapbox` hashtag so that we can amplify your work!
+Keep up with [@Mapbox](https://twitter.com/mapbox) and [@AnjanaVakil](https://twitter.com/anjanavakil) on Twitter, and [contact Mapbox](https://www.mapbox.com/contact/) if you need any help with our tools.  
 
 ## Thank you
 

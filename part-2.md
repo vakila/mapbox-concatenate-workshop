@@ -7,7 +7,7 @@ Create a map style to display the points in your dataset as circles on the map.
 ### Instructions
 
 #### Start a new style from a template:
-- Navigate to the Studio Styles page at https://studio.mapbox.com
+- Navigate to the Studio Styles page at [studio.mapbox.com](https://studio.mapbox.com)
 - Click "New Style" to create a new style
 - Choose one of the ready-to-go templates, whichever one you like best! Maybe try a Monochrome map in your favorite color? It's up to you!
 - Once you've chosen your template, click the "Customize" button to start styling the template
@@ -28,3 +28,7 @@ Create a map style to display the points in your dataset as circles on the map.
   - Stroke color: change the border color
 - Once you've styled your new custom layer, feel free to play around with the rest of the layers in the template. Click on a layer in the left sidebar to select it, then adjust the style properties however you wish.
 - When you're happy with how your map looks (or when you're out of time!), click the "Publish..." button in the upper right corner to publish your map style so it can be used in a web page (our next activity!).
+
+### Next step
+
+[Part 3](./part-3.md)
