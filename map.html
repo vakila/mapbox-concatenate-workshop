@@ -34,18 +34,81 @@
 
     // Set an access token to allow the browser to load the map from our account
     // TODO replace this with YOUR access token!
-    mapboxgl.accessToken = 'pk.eyJ1IjoidmFraWxhIiwiYSI6ImNrMWhuZnAwcjFjdWkzbm81M3pudXprcHIifQ.9As-ktwk5eelXbGP2z22HQ';
+    mapboxgl.accessToken = 'pk.eyJ1IjoidHJveTM0IiwiYSI6ImNqa2w1c2FoYzA1MGYza285aGx0cHVjNWIifQ.YTg83cMNLzog9aysZKZYjQ';
 
     // Instantiate a new Map object to load the map itself
     const map = new mapboxgl.Map({
-      style: 'mapbox://styles/mapbox/streets-v11', //TODO replace this with YOUR style URL! This tells the map which style to use
+      style: 'mapbox://styles/troy34/ck1j68ua82mtu1cnp55bmatuk', //TODO replace this with YOUR style URL! This tells the map which style to use
       container: 'map', // id of the container div we created above
       center: [3.39663, 6.44392], // the location to display when the map first loads
       zoom: 10 // the zoom level to display when the map first loads
     });
 
     // Part 4 code will go here
+    map.on('click', (event) => {
+    const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
+    console.log(JSON.stringify(clickedPoint));
+  });
 
+  map.on('click', (event) => {
+    const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
+
+    const location = {
+      center: clickedPoint,
+      zoom: map.getZoom(),
+      pitch: map.getPitch(),
+      bearing: map.getBearing(),
+    };
+
+    console.log(JSON.stringify(location, null, 2));
+  });
+  
+  map.on('click', (event) => {
+    const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
+
+    const location = {
+      center: clickedPoint,
+      zoom: map.getZoom(),
+      pitch: map.getPitch(),
+      bearing: map.getBearing(),
+    };
+
+    map.flyTo(location);
+
+    console.log(JSON.stringify(location, null, 2));
+  });
+
+
+   map.on('click', (event) => {
+    const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
+
+    const location = {
+      center: clickedPoint,
+      zoom: map.getZoom(),
+      pitch: map.getPitch(),
+      bearing: map.getBearing(),
+    };
+
+    map.flyTo(location);
+
+    const clicked = {
+      location: location
+    };
+
+    const clickedFeatures = map.queryRenderedFeatures(event.point, { layers: [ 'travel-map']});
+
+    if (clickedFeatures.length > 0) {
+    clicked.title = clickedFeatures[0].properties.title;
+    clicked.description = clickedFeatures[0].properties.description;
+
+    const popup = new mapboxgl.Popup() // create the popup
+      .setLngLat(clicked.location.center) // position it at the clicked point
+      .setHTML('<h3>' + clicked.title + '</h3><p>' + clicked.description + '</p>') // add some HTML content
+      .addTo(map); // place the popup on the map
+  }
+
+    console.log(JSON.stringify(clicked, null, 2));
+  });
     </script>
   </body>
 </html>
